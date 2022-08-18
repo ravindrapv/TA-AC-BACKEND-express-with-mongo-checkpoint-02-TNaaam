@@ -2,3 +2,324 @@
 @tailwind components;
 @tailwind utilities;
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  margin: 0 auto;
+  width: 50%;
+  align-content: center;
+}
+
+.box{
+  width: 40%;
+  margin-top: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.box-2{
+  width: 55%;
+  margin-top: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin: 0.6rem;
+  font-weight: 900;
+  text-transform: capitalize;
+  color: blue;
+  font-size: 2rem;
+}
+
+h2{
+    font-size: 1rem;
+    color: #5BCE93;
+}
+
+
+input {
+  width: 80%;
+  padding: 1rem;
+  margin: 0.3rem;
+  margin-left: 2rem;
+  color: blue;
+  border: 2px solid black;
+}
+.desc{
+  width: 80%;
+  height: 4rem;
+}
+
+
+header {
+  max-width: 100%;
+  height: 2.5rem;
+  padding: 1rem;
+  background-color: rgb(42, 41, 62);
+}
+
+footer {
+  max-width: 100%;
+  height: 2rem;
+  background-color: rgb(42, 41, 62);
+}
+
+a{
+  font-size: 2rem;
+  color: #5BCE93;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+small {
+  color: #ffff;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 900;
+}
+
+.btn-green{
+  padding: 1rem;
+  justify-content: center;
+  background-color: #5BCE93;
+  color: #ffff;
+  text-align: center;
+}
+
+.btn{
+  background-color: #5BCE93;
+  max-width: 10rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+}
+
+.center{
+  margin-left: 12rem;
+}
+
+.btn-green{
+  background-color: #5BCE93;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  color: #ffff;
+  width: 8rem;
+  border: none;
+}
+
+.btn-blue{
+  background-color: blue;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  color: #ffff;
+  width: 8rem;
+  border: none;
+}
+
+.btn-red{
+  background-color: red;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  color: #ffff;
+  width: 8rem;
+  border: none;
+}
+.btn-blue-2{
+    background-color: blue;
+    padding: 0.3rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+    color: #ffff;
+    width: 5rem;
+    border: none;
+  }
+  
+  .btn-red-2{
+    background-color: red;
+    padding: 0.3rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+    color: #ffff;
+    width: 5rem;
+    border: none;
+  }
+.btn-green-2{
+    background-color: #5BCE93;
+    font-size: 1rem;
+    color: #ffff;
+    text-transform: capitalize;
+    margin-left: 0;
+}
+
+.mr{
+    margin-top: 4rem;
+  }
+
+  i{
+    text-align: center;
+    font-size: 2rem;
+    color: #ffff;
+    justify-content: center;
+    text-transform: capitalize;
+  }
+
+  .p-comment{
+    margin: 1rem;
+    background-color: rgb(240,242,245);
+    padding: 1rem;
+  }
+
+  h4{
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 900;
+    background-color: #5BCE93;
+    padding: 0.5rem;
+  }
