@@ -19,15 +19,12 @@
         </div>
     </header>
     <div class="container box">
-        <form action="/event" method="post">
-            <h1>Add events</h1>
-            <input type="text" name="title" placeholder="enter the titel" required>
-            <input type="text" class="desc" name="description" placeholder="enter description">
-            <input type="text" name="host" placeholder="host">
-            <input type="date" name="start">
-            <input type="date" name="end" >
-            <input type="text" name="category" placeholder="category" required>
-            <input type="submit" class="btn center" value="sumbit">
+        <form action="" method="post">
+            <h1>Edit Remarks</h1>
+            <textarea name="content" placeholder="update remark" rows="4">
+                <%= comment.content %> 
+            </textarea>
+            <input type="submit" class="btn center" value="update">
         </form>
     </div>
 </body>

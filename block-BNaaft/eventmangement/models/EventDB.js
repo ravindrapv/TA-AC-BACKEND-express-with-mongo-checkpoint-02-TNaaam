@@ -2,11 +2,14 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var eventSchema = new Schema({
-    titel:{type:String,requerd:true},
+    title:{type:String,requerd:true},
     description:String,
-    age:Number,
-    phoneNumber:Number,
-    email:{type:String,requerd:true}
+    host:String,
+    start:Date,
+    end:Date,
+    category:[String],
+    location:String,
+    likes:Number
 },{timestamps:true});
 
 var EventDB = mongoose.model('EventDB',eventSchema);

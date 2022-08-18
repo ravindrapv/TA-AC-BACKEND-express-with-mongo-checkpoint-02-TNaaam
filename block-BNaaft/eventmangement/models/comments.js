@@ -1,13 +1,10 @@
 var mongoose = require('mongoose');
-const { schema } = require('./EventDB');
+
 var Schema = mongoose.Schema;
 
 var commentSchema = new Schema({
-    text:String,
-    author:String,
-    created:Date,
-    eventId:schema.types.objectId
-});
-
-var Comments = mongoose.model('Comments',{commentSchema});
+    content:{type:String, required:true},
+    eventId:{type:Schema.Types.ObjectId,ref:"EventDB",required:true}
+},{timestamps:true});
+var Comments = mongoose.model('Comments',commentSchema);
 module.exports = Comments;
