@@ -13,7 +13,7 @@
         <small>
             All events
         </small>
-        <a href="/event/new">Home</a>
+        <a href="/">Home</a>
     </header>
     <div class="container box-2">
         <h1><%= events.title %> </h1>
@@ -21,10 +21,10 @@
                 <h4><%= c %></h4>
             <% }) %>  
             <p><%= events.description %> </p>
-            <h2><%= events.host %> </h2>
-            <h2><%= events.start %> </h2>
-            <h2><%= events.end %> </h2>
-            <h3><%= events.likes ? events.likes: 0%> </h3>
+            <h3><%= events.host %> </h3>
+            <h3><%= events.start %> </h3>
+            <h3><%= events.end %> </h3>
+            <h5><%= events.likes ? events.likes: 0%> </h5>
             <div class="flex">
                 <a href="/event/<%= events.id %>/likes">
                     <button class="btn-green">
@@ -54,7 +54,7 @@
                 <% comments.forEach((comment) => { %> 
                     <p class="p-comment"><%= comment.content %> </p>
                     <div>
-                        <a href="/comments/<%= comment.id  %> /edit">
+                        <a href="/comments/<%= comment.id  %>/edit">
                             <button class="btn-blue-2">
                                 Edit
                             </button>
@@ -70,6 +70,6 @@
     </div>
 </body>
 <footer>
-    <i>All rights riserved</i>
+    <h6>All rights are recerved &copy;</h6>
 </footer>
 </html>

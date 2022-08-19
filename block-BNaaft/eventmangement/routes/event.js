@@ -52,9 +52,8 @@ router.get('/:id/edit',(req,res) => {
 router.post('/:id',(req,res) => {
   var id = req.params.id;
    Events.findByIdAndUpdate(id,req.body,(err,updateData) => {
-    events.tags = events.tags.join(" ")
     if(err) return next(err,updateData);
-    res.redirect(`/eventDetailes/` + id);
+    res.redirect('/event/' + id);
    })
 });
 
