@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event details</title>
+    <!-- <link rel="stylesheet" href="/stylesheets/style2.css"> -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header class="flex">
+        <small>
+            All events
+        </small>
+        <a href="/">Home</a>
+    </header>
+    <div class="container box-2">
+        <h1><%= events.title %> </h1>
+        <% events.category.forEach(c => { %>
+                <h4><%= c %></h4>
+            <% }) %>  
+            <p><%= events.description %> </p>
+            <h3><%= events.host %> </h3>
+            <h3><%= events.start %> </h3>
+            <h3><%= events.end %> </h3>
+            <h5><%= events.likes ? events.likes: 0%> </h5>
+            <div class="flex">
+                <a href="/event/<%= events.id %>/likes">
+                    <button class="btn-green">
+                        Like
+                    </button>
+                </a>
+                <a href="/event/<%= events.id %>/edit">
+                    <button class="btn-blue">
+                        Edit
+                    </button>
+                </a>
+                <a href="/event/<%= events.id %>/delete">
+                    <button class="btn-red">
+                        Delete
+                    </button>
+                </a>
+            </div>
+            <div>
+                <form action="/event/<%= events.id %>/remarks" method="post" class="mr">
+                   <textarea name="content" id="content" cols="40" rows="10" placeholder="Remarks"></textarea>
+                   <input type="submit" value="add remark" class="btn-green-2">
+                </form>
+            </div>
+            <div>
+                <h2>Remarks</h2>
+                   <hr>
+                <% comments.forEach((comment) => { %> 
+                    <p class="p-comment"><%= comment.content %> </p>
+                    <div>
+                        <a href="/comments/<%= comment.id  %>/edit">
+                            <button class="btn-blue-2">
+                                Edit
+                            </button>
+                        </a>
+                        <a href="/comments/<%= comment.id  %>/delete">
+                            <button class="btn-red-2">
+                                Delete
+                            </button>
+                        </a>
+                   </div>
+                    <% }) %> 
+            </div>
+    </div>
+</body>
+<footer>
+    <h6>All rights are recerved &copy;</h6>
+</footer>
+</html>

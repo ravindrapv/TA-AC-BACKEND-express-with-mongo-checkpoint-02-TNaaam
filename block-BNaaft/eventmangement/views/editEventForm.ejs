@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header>
+        <div class="flex">
+            <small>
+                Blog
+            </small>
+            <div>
+                <a href="/">Home</a>
+            </div>
+        </div>
+    </header>
+    <div class="container box">
+        <form action="/event/<%= events.id %>" method="post">
+            <h1>Edit events</h1>
+            <input type="text" name="title" placeholder="enter the titel" value="<%= events.title %> ">
+            <input type="text" class="desc" name="description" placeholder="enter description" value="<%= events.description %> ">
+            <input type="text" name="host" placeholder="host" value="<%= events.host %> ">
+            <input type="date" name="start" value="2022-05-12">
+            <input type="date" name="end" value="2022-06-28">
+            <input type="submit" class="btn center" value="Edit">
+        </form>
+    </div>
+</body>
+</html>
