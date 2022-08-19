@@ -12,13 +12,13 @@
         <small>
             all events
         </small>
-        <a href="/event/new">Home</a>
+        <a href="/">Home</a>
     </header>
     <h1>the events</h1>
     <% if(events.length) { %> 
         <% events.forEach(a => { %>
             <div class="container">
-              <div>
+              <div  class="box-card title">
                 <a href="/event/<%= a.id %>">
                   <h2><%= a.title %></h2>
                 </a>
